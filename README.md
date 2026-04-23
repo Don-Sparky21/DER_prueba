@@ -1,152 +1,52 @@
-# Diagrama ERD - Sistema de Ventas
+# 🚀 DevOps & Data Infrastructure - [Nombre de tu Empresa]
 
-```mermaid
-erDiagram
-	Pago }o--|| concepto : references
-	PagoPaciente }o--|| Pago : references
-	PagoPaciente }o--|| Turno : references
-	TurnoPaciente }o--|| Turno : references
-	MedicoEspecialidad }o--|| Especialidad : references
-	HistoriaPaciente }o--|| Historia : references
-	TurnoPaciente }o--|| Medico : references
-	MedicoEspecialidad }o--|| Medico : references
-	HistoriaPaciente }o--|| Medico : references
-	Turno }o--|| TurnoEstado : references
-	Paciente }o--|| Pais : references
-	HistoriaPaciente }o--|| Paciente : references
-	TurnoPaciente }o--|| Paciente : references
-	PagoPaciente }o--|| Paciente : references
+Este repositorio centraliza los scripts de automatización, migraciones de base de datos y configuraciones de CI/CD para el ecosistema de datos de la compañía.
 
-	CLIENTES {
-		NVARCHAR(50) Número_de_cliente
-		NVARCHAR(100) Nombre_de_cliente
-		NVARCHAR(50) STATUS
-	}
+---
 
-	concepto {
-		TINYINT idConcepto
-		VARCHAR(100) descripcion
-	}
+## 🏢 Información Corporativa
+*   **Organización:** [Nombre de la Empresa, ej: Fintech Solutions]
+*   **Unidad:** Ingeniería de Plataforma / DataOps
+*   **Responsable:** Administrador de DevOps & DBA
+*   **Estado del Sistema:** ![Status](https://img.shields.io/badge/Entorno-Producción-brightgreen)
 
-	Especialidad {
-		ESPECIALIDAD idEspecialidad
-		VARCHAR(30) Especialidad
-		VARCHAR(50) descripcion
-	}
+---
 
-	Especialidad2 {
-		ESPECIALIDAD idEspecialidad
-		VARCHAR(30) Especialidad
-		VARCHAR(50) descripcion
-	}
+## 📂 Ecosistema de Repositorios
+Para mantener la modularidad, nuestro trabajo se divide en los siguientes proyectos:
 
-	Especialidad3 {
-		ESPECIALIDAD idEspecialidad
-		VARCHAR(30) Especialidad
-		VARCHAR(50) descripcion
-	}
+| Repositorio | Descripción | Enlace |
+| :--- | :--- | :--- |
+| `db-migrations` | Scripts de control de cambios en SQL Server (Flyway/SSDT). | [Ver Repo](#) |
+| `infrastructure-as-code` | Definición de servidores y redes en Azure/AWS. | [Ver Repo](#) |
+| `etl-pipelines` | Flujos de automatización de datos (Python/KNIME). | [Ver Repo](#) |
 
-	Historia {
-		HISTORIA idHistoria
-		DATETIME fechaHistoria
-		OBSERVACION observacion
-	}
+---
 
-	HistoriaPaciente {
-		HISTORIA idHistoria
-		PACIENTE idPaciente
-		MEDICO idMedico
-	}
+## 🛠️ Stack Tecnológico
+*   **Engine:** SQL Server 2019 / PostgreSQL
+*   **CI/CD:** GitHub Actions & Azure DevOps
+*   **Infraestructura:** Docker & Terraform
+*   **Lenguajes:** T-SQL, PowerShell, Python
 
-	Medico {
-		MEDICO idMedico
-		VARCHAR(50) nombre
-		VARCHAR(50) apellido
-	}
+---
 
-	MedicoEspecialidad {
-		MEDICO idMedico
-		ESPECIALIDAD idEspecialidad
-		VARCHAR(50) descripcion
-	}
+## ⏱️ Actividad Reciente del Proyecto
+> **Nota:** Esta sección resume los hitos más importantes del desarrollo. Para ver el historial completo y en tiempo real, consulta la pestaña **[Commits](./commits)**.
 
-	Paciente {
-		PACIENTE idPaciente
-		VARCHAR(20) dni
-		VARCHAR(50) nombre
-		VARCHAR(50) apellido
-		DATE fNacimiento
-		VARCHAR(50) domicilio
-		CHAR(3) idPais
-		VARCHAR(20) telefono
-		VARCHAR(30) email
-		OBSERVACION observacion
-	}
+*   **Marzo 2024:** 🛠️ Implementación de Backups automáticos en S3.
+*   **Febrero 2024:** 🚀 Migración de scripts manuales a Pipelines de CI/CD.
+*   **Enero 2024:** 🔒 Refactorización de políticas de seguridad en esquemas de BD.
 
-	Paciente1 {
-		INT idPaciente
-		VARCHAR(50) nombre
-		VARCHAR(50) apellido
-		DATE fNacimiento
-		VARCHAR(50) domicilio
-		CHAR(3) idPais
-		VARCHAR(20) telefono
-		VARCHAR(30) email
-		VARCHAR(1000) observacion
-		DATETIME fechaAlta
-	}
+---
 
-	PacienteLog {
-		PACIENTE idpaciente
-		CHAR(3) idpais
-		DATETIME fechaAlta
-		DATETIME fechaModificacion
-		DATETIME fechaBaja
-	}
+## 👤 Colaboradores Principales
+*   **DBA Jr / DevOps Analyst:** [Tu Nombre o Usuario]
+*   **Senior DevOps:** [Nombre del Líder de equipo]
 
-	Pago {
-		INT idPago
-		TINYINT concepto
-		DATETIME fecha
-		MONEY monto
-		TINYINT estado
-		OBSERVACION observacion
-	}
+---
 
-	PagoPaciente {
-		INT idPago
-		PACIENTE idPaciente
-		INT idTurno
-	}
-
-	Pais {
-		CHAR(3) idPais
-		VARCHAR(30) Pais
-	}
-
-	sysdiagrams {
-		SYSNAME name
-		INT principal_id
-		INT diagram_id
-		INT version
-		VARBINARY(MAX) definition
-	}
-
-	Turno {
-		TURNO idTurno
-		DATETIME fechaTurno
-		SMALLINT estado
-		OBSERVACION observacion
-	}
-
-	TurnoEstado {
-		SMALLINT idEstado
-		VARCHAR(50) descripcion
-	}
-
-	TurnoPaciente {
-		TURNO idTurno
-		PACIENTE idPaciente
-		MEDICO idMedico
-	}
-```
+## 📖 Guía Rápida de Uso
+1.  **Clonar el repo:** `git clone https://github.com/empresa/repo.git`
+2.  **Crear una rama:** `git checkout -b feature/nueva-automatizacion`
+3.  **Documentar:** Asegúrate de actualizar el historial si haces cambios críticos en la estructura de la BD.
