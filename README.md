@@ -7,7 +7,7 @@ Este repositorio centraliza los scripts de automatización, migraciones de base 
 ## 🏢 Información Corporativa
 *   **Organización:** [Nombre de la Empresa, ej: Fintech Solutions]
 *   **Unidad:** Ingeniería de Plataforma / DataOps
-*   **Responsable:** Administrador de DevOps & DBA
+*   **Responsable:** DevOps 
 *   **Estado del Sistema:** ![Status](https://img.shields.io/badge/Entorno-Producción-brightgreen)
 
 ---
