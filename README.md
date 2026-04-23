@@ -43,6 +43,11 @@ Para mantener la modularidad, nuestro trabajo se divide en los siguientes proyec
 ## 👤 Colaboradores Principales
 *   **DBA Jr / DevOps Analyst:** [Tu Nombre o Usuario]
 *   **Senior DevOps:** [Nombre del Líder de equipo]
+*   **👤 Colaboradores Dinamicos :** 
+
+<a href="https://github.com/TU_USUARIO/TU_REPO/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=Don-Sparky21/DER_prueba" />
+</a>
 
 ---
 
